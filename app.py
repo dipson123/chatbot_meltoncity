@@ -28,8 +28,9 @@ def database():
     host="us-cdbr-iron-east-02.cleardb.net"
     user="baf2465224ae4f"
     password="f427a7a0")
-@app.route('/', methods=['POST'])
 @app.route('/', methods=['GET'])
+@app.route('/', methods=['POST'])
+
 return (mydb)
 def webhook():
 
