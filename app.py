@@ -1,4 +1,5 @@
 import os
+import mysql.connector
 import sys
 import json
 
@@ -19,9 +20,17 @@ def verify():
         return request.args["hub.challenge"], 200
 
     return "Hello world", 200
-
-
 @app.route('/', methods=['POST'])
+
+
+def database():
+    mydb= mysql.connector.connect(
+    host="us-cdbr-iron-east-02.cleardb.net"
+    user="baf2465224ae4f"
+    password="f427a7a0")
+@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
+return (mydb)
 def webhook():
 
     # endpoint for processing incoming messaging events
