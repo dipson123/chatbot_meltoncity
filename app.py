@@ -25,7 +25,7 @@ def verify():
 
 def database():
     mydb= mysql.connector.connect(
-    host="us-cdbr-iron-east-02.cleardb.net"
+    host="54.175.48.207:47162"
     user="baf2465224ae4f"
     password="f427a7a0")
 @app.route('/', methods=['GET'])
