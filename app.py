@@ -1,5 +1,4 @@
 import os
-import mysql.connector
 import sys
 import json
 
@@ -23,15 +22,13 @@ def verify():
 @app.route('/', methods=['POST'])
 
 
-def database():
-    mydb= mysql.connector.connect(
-    host="54.175.48.207:47162"
-    user="baf2465224ae4f"
-    password="f427a7a0")
-@app.route('/', methods=['GET'])
-@app.route('/', methods=['POST'])
+#def database():
+    #mydb= mysql.connector.connect(
+   # host="54.175.48.207:47162"
+    #user="baf2465224ae4f"
+    #password="f427a7a0")
 
-return (mydb)
+#return (mydb)
 def webhook():
 
     # endpoint for processing incoming messaging events
